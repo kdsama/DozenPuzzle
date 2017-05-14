@@ -1,0 +1,12 @@
+White Cross
+
+Initial requirements 
+:- R , Ri , F , Fi , D , Di
+
+1) image :- flipped and on white side
+ image :- algo for flipped at white side . 
+
+2) flipped and placed at yellow side .
+   algo for flipped at yellow side 
+
+ 

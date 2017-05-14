@@ -1,0 +1,87 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script type = "text/javascript">
+  $("a[data-tab-destination]").on('click', function() {
+        var tab = $(this).attr('data-tab-destination');
+        $("#"+tab).click();
+    });</script> -->
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/angular.min.js"></script>
+<script src="js/angular-animate.js"></script>
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+<script type = "text/javascript" src="js/main.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>www.dozenpuzzles.com</title>
+	<link rel="icon" type="image/icon" href="images/cube_icon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app ="" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div ng-include="'header.html'"></div>
+
+ <div class="row">
+  <div class="col-lg-2">
+  <div class="navbar-left">
+<h6>Video References ##</h6>
+<h6>About 3X3 Cube##</h6>
+<h6>Different Methods</h6>
+<h6> Designs</h6>
+</div></div>
+<div class="col-lg-10">
+<div class="container1">
+
+<div ng-include="'pill.html'" class="tabbable bne-tabs-framed tabs-above clearfix" style="height:50px;">
+
+
+ </div> 
+
+  <div class="tab-content">
+
+    <div id="wc" class="tab-pane fade clearfix in active">WHITE CROSS
+        <ul class="pager">
+        <li><a href="#wl" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="wl" class="tab-pane fade clearfix">WHITE LAYER
+        <ul class="pager">
+        <li ><a href="#wc" data-toggle="tab" >Previous</a></li>
+        <li ><a href="#sl" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="sl" class="tab-pane fade clearfix"><h1>SECOND LAYER</h1> 
+        <ul class="pager">
+        <li><a href="#wl" data-toggle="tab" >Previous</a></li>
+        <li><a href="#tf" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="tf" class="tab-pane fade clearfix">TOP FACE
+        <ul class="pager">
+        <li><a href="#sl" data-toggle="tab" >Previous</a></li>
+        <li><a href="#sc" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="sc" class="tab-pane fade clearfix">Setting corners
+        <ul class="pager">
+        <li><a href="#tf" data-toggle="tab" >Previous</a></li>
+        <li><a href="#se" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="se" class="tab-pane fade clearfix">Setting edges
+        <ul class="pager">
+        <li><a href="#sc" data-toggle="tab" >Previous</a></li>
+        </ul>
+    </div>
+
+
+  </div>
+  </div>
+
+</div>
+</div>
+</html>

@@ -1,0 +1,485 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script type = "text/javascript">
+  $("a[data-tab-destination]").on('click', function() {
+        var tab = $(this).attr('data-tab-destination');
+        $("#"+tab).click();
+    });</script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type = "text/javascript">
+ jQuery(document).ready(function($){
+
+  
+
+  // Allow Page URL to activate a tab's ID
+
+  var taburl = document.location.toString();
+
+  if( taburl.match('#') ) {
+
+    $('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
+    
+  }
+
+
+
+  // Allow internal links to activate a tab.
+
+  $('a[data-toggle="tab"]').click(function (e) {
+
+    e.preventDefault();
+
+    $('a[href="' + $(this).attr('href') + '"]').tab('show');
+    $(window).scrollTop(0);
+  });
+
+
+
+}); // End</script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>www.dozenpuzzles.com</title>
+	<link rel="icon" type="image/icon" href="images/cube_icon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- TO IMPLEMENT HIDE AND SHOW DIVS -->
+
+
+
+
+
+
+<body data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">DozenPuZZle</a>
+    </div>
+    <div class="collapse navbar-collapse" id ="myNavbar">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Puzzles<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#allcubes"><bold>All Puzzles</bold></a></li>
+          <li class="divider"></li>
+          <li><a href="#"><bold>Classic</bold></a></li>
+          <li><a href="2X2X2.html">- 2X2 Cube</a></li>
+          <li><a href="3X3X3.html"">- 3X3 Cube</a></li>
+          <li><a href="#">- 4X4 Cube</a></li>
+          <li><a href="#">- 5X5 Cube</a></li>
+          <li><a href="#">- 6X6 Cube</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><bold>Twisters</bold></a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Events</a></li>
+
+    </ul>
+    
+    
+  </div>
+</nav>
+
+</div>
+<div class="navbar-left">
+<ul class="nav nav-pills nav-stacked">
+<li class = "active"><a href = "3X3X3.html">Solution</a></li>
+<li class=""><a href = "#vidref" data-toggle="tab">Video References</a> </li>
+<li><a href = "#abc" data-toggle="tab">About 3X3</a></li>
+<li><a href = "#dm" data-toggle="tab">Different Methods</a></li>
+<li><a href = "#des" data-toggle="tab"> Designs</a></li>
+<li><a href = "#not" data-toggle="tab"> Notations</a></li>
+</ul>
+</div>
+<div class="container-shift">
+<span style="font-size:30px;"> To Solve 3X3 :</span><span style="font-size:22px;">Beginner's Method</span>
+
+
+<div class="tabbable bne-tabs-framed tabs-above clearfix">
+
+  <ul class="nav nav-pills" style='height:50px;'>
+
+    <li class="active"><a href="#wc" data-toggle="tab">White Cross</a></li>
+
+    <li class=""><a href="#wl" data-toggle="tab">White Layer</a></li>
+
+    <li class=""><a href="#sl" data-toggle="tab">Second Layer</a></li>
+
+    <li class=""><a href="#tf" data-toggle="tab">Top Face</a></li>
+
+    <li class=""><a href="#sc" data-toggle="tab">Setting Corner of Top Layer</a></li>
+
+    <li class=""><a href="#se" data-toggle="tab">Setting Edges of Top Layer</a></li>
+
+
+  </ul>
+
+  
+
+  <div class="tab-content">
+
+    <div id="wc" class="tab-pane fade clearfix in active">
+        
+        <h3>Introduction</h3>
+        <p> You came to this website means you might have had the urge to throw your Cube or you just might have.
+            This happens to everyone . This might have had happened to Feliks Zemdegs who set the current record and all it took was 4.74 seconds.
+            Rubiks cube is a lot easier than you think . Beginner's method is very easy to implement and once you are able to solve it 
+            You just might not be interested or involved in the social life 
+            So Lets Begin</p>
+        <h3> The White Cross </h3>
+        <img src = "images/whitecross.png" height="200px" width="200px"/>
+        
+        <p> The first thing to keep in mind is to keep the White face at top .Also,it is always recommended to start with the white face as it is 
+            the brightest of the lot
+            Intermediate and fast Cubers keep the white face in bottom . So once , you start getting a grip on the cube and start solving the cube</p>
+        <p> In a 3X3x3 cube , all the faces are fixed. Yellow will be opposite to white . White face will be adjacent to blue , orange , green and red.
+            At later stages , if your remember which face is adjacent to which one, this would be benificial, but now it is not required.
+        <p> For a normal cube , it goes like this</p>
+        <p>- White and Yellow are opposites.
+        <p>- Red and Orange are opposites.
+        <p>- Green and Blue are opposites.      
+
+        <p> There is no algorithm required to solve the white cross . You have to place all the white edges corresponding to the adjacent faces . 
+        <p> Like , an edge piece of colors white and blue should be placed in such a way that the white part is on the face whose center is white and blue side of the edge should be placed where the face has blue center piece. </p>
+        <div class="well" ><span class="text-primary">Note :The Center piece of the face determines what will be the color of the face</span></div>
+        <h4> Inverted Edges</h4>
+        <img src = "images/invedge.png" height="200px" width="200px"/>
+        
+        <p> You can do it either ways , by using the right or the left side . The Algorithm will be similar</p>
+        <p> The case we are taking is where the adjacent right face already has the edge placed. If the edge is not there on the right side
+        <p> A shorter approach will be taken which you can figure out yourself once you start applying this algorithm</p>
+        <p> Followings steps will ensure you get the edge the way you want</p>
+        <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          <th><img src = "images/D.jpg" height="90px" width="90px"/></th>
+          <th>D</th>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          </tr>
+        </thead>
+        </table>
+        <p> This step is easy so practice it a few times and then head on to the Next Step</p>
+         
+        <ul class="pager">
+        <li><a href="#wl" data-toggle="tab" >Next</a></li></ul>
+        
+    </div>
+
+    <div id="wl" class="tab-pane fade clearfix">WHITE LAYER
+
+      <p>Now for the white layer you have to insert the corner pieces . First thing you need to do is to put the white face at the bottom</p>
+      <p> Which means the yellow face should be at top</p>
+      <p> A corner piece has three colors , so insert the corner piece in such a way that all the faces of the corner matches the faces of the cube</p>
+      <p> For this three cases will arive . Don't worry , They can be completed in 3 to 4 moves</p>
+      <div class="well" ><span class="text-primary">Note :To make things easier the corner piece will be placed at the right side of the cube and the algorithms will be put accordingly</span></div>
+      <h3> White facing towards you</h3>
+      <img src="images/wl1.png" height="200px" width="200px"/>
+      <p> Algorithm used :</p><span font="70px"><bold> U R Ui Ri </bold></span> 
+      <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          </tr>
+          </thead>
+          </table>
+      <div class="well" ><span class="text-primary">Note :Place the white corner so one of these cases arrive</span></div>
+      <h3> White facing towards at Right Face</h3>
+      <img src="images/wl2.png" height="200px" width="200px"/>
+      <p> Algorithm used :</p><span font="70px"><bold> U R Ui Ri </bold></span> 
+      <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Fi.jpg" height="90px" width="90px"/></th>
+          <th>Fi</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          </tr>
+          </thead>
+          </table>
+      <h3> White facing Upwards</h3>
+      <img src="images/wl3.png" height="200px" width="200px"/>   
+      <p> This case can be easily solved . Apply First or Second Algorithm </p>
+      <p> Say , If you apply U R Ui Ri , then apply Fi Ui </p>
+      <p> If you apply Ui Fi U F , then apply R U </p>
+      <p> As a result , you will get first or second case which can be easily solved
+        <ul class="pager">
+        <li ><a href="#wc" data-toggle="tab" >Previous</a></li>
+        <li ><a href="#sl" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="sl" class="tab-pane fade clearfix"><h1>SECOND LAYER</h1> 
+    <p> You have reached this stage means that you are comfortable in solving the white layer </p>
+    <p> This is the place where the algorithm will get a little longer , but dont worry , It uses two faces at a time , so remembering this wont be a problem</p>
+    <div class="well" ><span class="text-primary">Note :To Explain this we have taken Red as the FRONT FACE</span></div>
+    <p> For the second layer , there are three cases</p>
+    <p>- Slotting the edge which involves front and the right face </p>
+    <p>- Slotting the edge which involves front and the left face</p>
+    <p>- Piece is already sorted but inverted</p>
+    <h3> Slotting Between Front and the Right Face</h3>
+    <img src = "images/slr.png" height="200px" width="200px" />
+    <p> You can see that the red green edge has to be brought in the second layer at the front-right edge slot</p>
+    <p> The Algorithm that we need to use for this is</p>
+    <bold>U R Ui Ri Ui Fi U F</bold>
+    <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          </tr>
+          </thead>
+          </table>
+          <table class ="table">
+          <thead>
+          
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Fi.jpg" height="90px" width="90px"/></th>
+          <th>Fi</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          </tr>
+          </thead>
+          </table>
+    <h3> Slotting Between Front and the Left Face</h3>
+    <img src = "images/sll.png" height="200px" width="200px" />
+    <p> You can see that the red blue edge has to be brought in the second layer at the front-left edge slot</p>
+    <div class="well" ><span class="text-primary">Note :Red will remain the front face . To illustrate slotting of the edge in the front-left edge slot , right face is taken as front face i.e Red</span></div>
+    <p> The Algorithm that we need to use for this is</p>
+    <bold>Ui Li U L U F Ui Fi</bold>
+    <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Li.jpg" height="90px" width="90px"/></th>
+          <th>Li</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/L.jpg" height="90px" width="90px"/></th>
+          <th>L</th>
+          </tr>
+          </thead>
+          </table>
+          <table class = "table">
+          <thead>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Fi.jpg" height="90px" width="90px"/></th>
+          <th>Fi</th>
+          </tr>
+          </thead>
+          </table>
+    <h3> Inverted Edge </h3>
+    <img src="images/sli.png" height="200px" width="200px" />
+    <p> For this case You would have to apply the algorithm twice depending upon the case </p>
+    <h4> Inverted at the front-right slot </h4>
+    <p> U R Ui Ri Ui Fi U F <strong> U U </strong> U R Ui Ri Ui Fi U F </p>
+    <h4> Inverted at the front-left slot </h4>
+    <p> Ui Li U L U F Ui Fi <strong> U U  </strong> Ui Li U L U F Ui Fi</p>
+
+
+        <ul class="pager">
+        <li><a href="#wl" data-toggle="tab" >Previous</a></li>
+        <li><a href="#tf" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="tf" class="tab-pane fade clearfix">
+    <img src = "images/ycross.png" height = "200px" width ="200px" />
+    <p> Now that we are done with the first two layer , Next step is to make <strong> Yellow Face </strong>. The top should be yellow . After that we will take care of top layer's corners and edges </p>
+    <p> So for the Top layer we might get 4 Cases </p>
+    <div class = "well"> <span class="text-primary">Note: We have to make the Yellow Cross, So Dont get confused by the corners as for Now concentrate on the edges </span></div>
+    <table class ="table">
+    <thead>
+    <tr>
+    <th width ="30%"> L design </th>
+    <th width ="70%"> <img src = "images/yl.png" height="80px" width ="80px" /></th>
+    </tr>
+    </thead>
+    <p> <strong> F U R Ui Ri Fi </strong>
+    <p> position the L design in the way it is shown above and apply the following algorithm</p>
+        <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          <th><img src = "images/Fi.jpg" height="90px" width="90px"/></th>
+          <th>Fi</th>
+          </tr>
+          </thead>
+          </table>
+
+    </table>
+    <table class ="table">
+    <thead>
+    <tr>
+    <th witdth ="30%"> Straight Line </th>
+    <th width ="70%"> <img src = "images/yp.png" height="80px" width ="80px" /></th>
+    </tr>
+    </thead>
+    </table>
+    <p> <strong> F R U Ri Ui Fi </strong>
+    <p>Place the yellow line parallel to the front face </p>
+     <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/F.jpg" height="90px" width="90px"/></th>
+          <th>F</th>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          <th><img src = "images/Ui.jpg" height="90px" width="90px"/></th>
+          <th>Ui</th>
+          <th><img src = "images/Fi.jpg" height="90px" width="90px"/></th>
+          <th>Fi</th>
+          </tr>
+          </thead>
+          </table>
+    <table class ="table">
+    <thead>
+    <th width="30%"> Yellow at the Center</th>
+    <th widht="70%"> <img src = "images/yc.png" height="80px" width ="80px" /></th>
+    </thead>
+    </table>
+    <p><strong> Apply  F R U Ri Ui F alogirthm . You will get one of the two cases above . Then apply the corresponding Alogrithm for that </strong> </p>
+    <p> Now that we have the cross lets move to completing the Yellow Top Face </p>
+
+    <h2> Yellow Corners </h2>
+    <p> The algorithm for this case  might be needed to be implemented twice or thrice to get the yellow top face </p>
+    <p> This is that we should get to proceed towards the yellow top </p>
+    <img src="images/yet to be made.png" height="100px" width="100px" />
+    <p> But knowing the luck of us , Humans , we will probably get all other cases but this one . These are the cases you might encounter and we will be using the <strong> SAME ALOGIRTHM </strong> for all these cases .That would lead us to for the Yellow Top </p>
+    <div class="Well"><span class="text-primary">Note : To make it Easier to Understand , case with Red as front Face is taken . Algorithm has to be used taking Red as front face .The face of the red is showed on right in few cases to give an idea how the adjacent face will look like</span> </div>
+    <h3> Case 1</h3>
+    <img src="images/ytop5.png" height="100px" width ="100px"/>
+    <p> From the other angle , this will look like </p>
+    <img src="images/ytop5.png" height="100px" width ="100px"/>
+    <h3> Case 2</h3>
+    <img src="images/ytop6.png" height="100px" width ="100px"/>
+    <br>
+    <h3> Case 3</h3>
+    <img src="images/ytop2.png" height="100px" width ="100px"/>
+    <br>
+    <h3> Case 4</h3>
+    <img src="images/ytop3.png" height="100px" width ="100px"/>
+    <br>
+    <p> The Algorithm That is to be used is <strong> R U Ri U R U U Ri </strong> </p>
+    <table class="table">
+        <thead>
+          <tr>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          </tr>
+          </thead>
+          </table>
+          <table class="table">
+          <thead>
+          <tr>
+          <th><img src = "images/R.jpg" height="90px" width="90px"/></th>
+          <th>R</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/U.jpg" height="90px" width="90px"/></th>
+          <th>U</th>
+          <th><img src = "images/Ri.jpg" height="90px" width="90px"/></th>
+          <th>Ri</th>
+          </tr>
+          </thead>
+          </table>
+          <p> The algorithm will be applied 2-3 times to get the apropriate result </p>
+          <img src="images/scorner.png" height="200px" width="200px" />
+
+
+
+
+
+        <ul class="pager">
+        <li><a href="#sl" data-toggle="tab" >Previous</a></li>
+        <li><a href="#sc" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="sc" class="tab-pane fade clearfix">Setting corners
+        <ul class="pager">
+        <li><a href="#tf" data-toggle="tab" >Previous</a></li>
+        <li><a href="#se" data-toggle="tab" >Next</a></li></ul>
+    </div>
+
+    <div id="se" class="tab-pane fade clearfix">Setting edges
+        <ul class="pager">
+        <li><a href="#sc" data-toggle="tab" >Previous</a></li></ul>
+    </div>
+
+
+  </div>
+  
+
+</div>
+</div>
+
+</html>

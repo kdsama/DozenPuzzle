@@ -1,0 +1,96 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js">
+	
+	
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+  function validation(){
+  	var x = document.getElementById("user").value;
+  	var y = document.getElementById("email").value;
+  	var	z = y.toString();
+
+  	if(x =="" || X == NULL){
+  		document.getElementById("val").innerHTML= "Nope";
+  	}
+  		var apos = z.lastIndexof("@");
+  		var vpos = z.lastIndexof(".");
+
+  	document.getElementById("val").innerHTML=apos;
+  	
+  }
+  
+
+</script>
+
+<!-- Latest compiled JavaScript -->
+
+	<title>www.dozenpuzzles.com</title>
+	<link rel="icon" type="image/icon" href="images/cube_icon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app=""  data-spy="scroll" data-target=".navbar" data-offset="50">
+<div ng-include="'header.html'"></div>
+<!-- <iframe src="HEADER.html" width="100%" height="20px"></iframe>
+</div> -->
+<div  id="allcubes">
+<div class="container">
+	<table >
+		<tr><bold>Classic Cubes</bold></tr>
+		<tr>
+			<td id="anim"><figure><a href="2X2X2.html"><img src="images/2x2.png" height=100 width=100/><figcaption>2X2X2</figcaption></a></figure></td>
+			<td id="anim"><figure><a href="3X3X3.html"><img src="images/3X3.png" height=100 width=100/><figcaption>3X3X3</figcaption></a></figure></td>
+			<td id="anim"><figure><a href=""><img src="images/4x4.png" height=100 width=100/><figcaption>4X4X4</figcaption></a></figure></td>
+			<td id="anim"><figure><a href=""><img src="images/5x5.png" height=100 width=100/><figcaption>5X5X5</figcaption></a></figure></td>
+			<td id="anim"><figure><a href=""><img src="images/6x6.png" height=100 width=100/><figcaption>6X6X6</figcaption></a></figure></td>
+			
+		</tr>
+		<tr><td><bold>Twisters</bold></td></tr>
+		<tr><td id="anim"><figure><a href=""><img src="images/mirror_cube.png" height=100 width=100/><figcaption>Mirror Cube</figcaption></a></figure></td>
+		<tr><td><bold>Minx</bold></td></tr>
+			<td id="anim"><figure><a href=""><img src="images/megaminx.png" height=100 width=100/><figcaption>Megaminx</figcaption></a></figure></td>
+	</table>
+
+</div>
+</div>
+<br><br>
+
+<div id="subscribe" class="modal" role="dialog" >
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">Exit</button>
+</div>
+<div class="modal-body">
+<form name="sub">
+  <label for="usr">Name</label>
+  <input type="text" ng-model="user" class="form-control" name="user" required>
+<span ng-show="sub.user.$error.required && sub.user.$touched" > Enter UserName </span>
+<br>
+<br>
+  <label for="">Email Id</label>
+  <input type="email" ng-model="email" class="form-control" name="email" required >
+<span style="color:red;" ng-show="sub.email.$error.required && sub.email.$touched"> Enter Email </span>
+<span ng-show="sub.email.$error.email"> Enter Email correctly </span>
+<br>
+<br>
+<button class="button" type = "btn btn-primary">Submit</button>
+
+</form>
+<p id="val"></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
